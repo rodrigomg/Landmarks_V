@@ -27,7 +27,9 @@ struct HikeView: View {
                 Spacer()
 
                 Button(action: {
-                    self.showDetail.toggle()
+                    withAnimation(.easeOut(duration: 5)) {
+                        self.showDetail.toggle()
+                    }
                 }) {
                     Image(systemName: "chevron.right.circle")
                         .imageScale(.large)
